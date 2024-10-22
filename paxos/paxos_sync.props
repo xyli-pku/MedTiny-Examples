@@ -1,0 +1,12 @@
+A [F G proposer1_s = 4 | proposer2_s = 4];
+A [F acceptor1_s = 3];
+A [F acceptor2_s = 3];
+A [F acceptor3_s = 3];
+A [F acceptor1_s = 3 U acceptor1_s = 4];
+A [F acceptor2_s = 3 U acceptor2_s = 4];
+A [F acceptor3_s = 3 U acceptor3_s = 4];
+A [F G acceptor1_s = 4];
+A [F G acceptor2_s = 4];
+A [F G acceptor3_s = 4];
+A [F learner_status = 2];
+A [F G learner_finish = true];

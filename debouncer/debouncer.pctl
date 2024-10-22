@@ -1,0 +1,13 @@
+//delay_controller is supposed to filter out button signal glitches faster than delay_time, which can be devised into a liveness and safety pair
+
+//On the rising edge of raw_signal.value and a relatively longer time has elapsed since the last rising edge (count by delay_counter), eventually the output state will change.
+raw_signal.value & ! prev_input & delay_counter == 0 -> \X prev_output != output
+//If delay_counter hasn't passed since last rising edge, the output state will not change.
+\G (delay_counter > 0 -> prev_output == output) 
+
+//Furthermore, to guarantee the timely update of filtered_latch:
+\G (prev_output != output -> \X filtered_latch.value = output )
+
+//Finally, delay_time should be correctly counted by delay_counter. The ability to reason about time is outside the capability of LTL, but since we have knowledge of clock_time, it is still representable:
+\G (delay_counter == delay_cycle -> (\X delay_counter>0)^{delay_time/polling_time} \X delay_counter==0)
+

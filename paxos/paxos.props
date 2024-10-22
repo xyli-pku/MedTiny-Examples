@@ -1,0 +1,14 @@
+A [G !"deadlock"]
+A [F G proposer_s = 4];
+A [F acceptor1_s = 3];
+A [F acceptor2_s = 3];
+A [F acceptor3_s = 3];
+A [F acceptor1_s = 3 U acceptor1_s = 4];
+A [F acceptor2_s = 3 U acceptor2_s = 4];
+A [F acceptor3_s = 3 U acceptor3_s = 4];
+A [F G acceptor1_s = 4];
+A [F G acceptor2_s = 4];
+A [F G acceptor3_s = 4];
+A [F G learner_finish = true];
+A [F G learner_chosen_value != 0];
+A [F G acceptor1_last_accepted_value = acceptor2_last_accepted_value & acceptor1_last_accepted_value = acceptor3_last_accepted_value];
