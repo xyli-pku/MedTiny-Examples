@@ -1,0 +1,251 @@
+body {
+  font-family: Sans-Serif;
+}
+
+.splashbigname {
+  font-size:52pt;
+  font-weight:bold;
+  letter-spacing:-5px;
+  margin-right:1cm;
+}
+
+.splashbigname a {
+  text-decoration: none;
+  color:black;
+}
+
+.exlist a {
+  margin-left: 0px;
+  font-family: monospace;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.leader-board-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.leader-board-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+}
+
+.leader-board-table th,
+.leader-board-table td {
+    padding: 12px 15px;
+}
+
+.leader-board-table tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+.leader-board-table tbody tr {
+    background-color: #ffffff;
+}
+
+
+html {
+    -ms-text-size-adjust: none;
+    font-size: 16px;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 15px 15px 15px 15px;
+    background-color: #F8F9FA; /* UPDATED - Light gray background */
+    color: #333; /* Default text color - good for readability */
+}
+
+h1,h2,h3,h4
+{
+    font-family: Helvetica, Arial, sans-serif;
+    color: #3A7CB5; /* UPDATED - Primary Blue (slightly darker for headers) */
+}
+
+code {
+    font-family: monospace;
+    background: #EFF2F7; /* UPDATED - Light blue-gray for code blocks */
+    padding: 2px 4px;
+    border-radius: 3px;
+}
+
+p,li,address
+{
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+table {
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+/*
+li,th,td
+{
+  font-size: 85%;
+}
+*/
+
+li {
+    margin: 3px 0;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ol:first-of-type {
+    counter-reset: pubcounter 90 repcounter 25;
+}
+
+ol.pub {list-style: none; margin-left:4em; padding:0; }
+ol.pub li { display: block; margin:0; padding:2pt; }
+ol.pub li:before {content: "[" counter(pubcounter) "] ";
+                color: #28A745; /* UPDATED - A calm green for list markers */
+                width: 2.8em;
+                margin-left:-2.8em;
+                counter-increment: pubcounter -1;
+                text-align: left;
+                display: inline-block; }
+
+ol.rep {list-style: none; margin-left:4em; padding:0; }
+ol.rep li { display: block; margin:0; padding:2pt; }
+ol.rep li:before {content: "[R" counter(repcounter) "] ";
+                color: #28A745; /* UPDATED - A calm green for list markers */
+                width: 3.3em;
+                margin-left:-3.3em;
+                counter-increment: repcounter -1;
+                text-align: left;
+                display: inline-block; }
+
+hr /* Added hr to the main color rule for consistency */
+{
+    color: #3A7CB5; /* UPDATED - Primary Blue */
+    border-top: 1px solid #3A7CB5; /* Make HR more visible */
+}
+
+a:link      { color: #4A90E2; } /* UPDATED - Primary Blue for links */
+a:visited   { color: #4A90E2; } /* UPDATED - Consistent visited link color */
+a:hover     { color: #63A3EA; text-decoration: underline;} /* UPDATED - Lighter blue for hover */
+a:active    { color: #357ABD; } /* UPDATED - Darker blue for active */
+
+#footer
+{
+    color: #6c757d; /* UPDATED - Medium gray for footer */
+    font-size: 65%;
+}
+
+pre {
+        border: 1px dashed #adb5bd; /* UPDATED - Softer gray border */
+        padding: 10px; /* Increased padding slightly */
+        background: #EFF2F7; /* UPDATED - Light blue-gray background */
+        overflow: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 4px; /* Added slight rounding */
+}
+
+a.btn {
+    display: inline-block;
+    color: #495057; /* UPDATED - Darker gray for text */
+    background-color: #e9ecef; /* UPDATED - Light gray background */
+    text-transform: uppercase;
+    letter-spacing: 1.5px; /* Adjusted spacing */
+    font-size: 75%;
+    font-weight: bold; /* Added for a bit more emphasis */
+    padding: 10px 25px; /* Adjusted padding */
+    border-radius: 5px;
+    border: 1px solid #ced4da; /* UPDATED - Softer border */
+    border-bottom-width: 3px;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out; /* Added transition */
+}
+
+    a.btn:hover {
+        background-color: #dee2e6; /* UPDATED - Slightly darker gray */
+        border-color: #adb5bd; /* UPDATED - Darker border */
+        color: #343a40;
+    }
+
+    a.btn:active {
+        background-color: #ced4da; /* UPDATED - Even darker gray */
+        border-color: #6c757d; /* UPDATED - Stronger border */
+        transform: translateY(1px); /* Slight press effect */
+    }
+
+/* blue button (Primary Action) */
+
+a.btn.btn-blue {
+    background-color: #4A90E2; /* UPDATED - Primary Blue */
+    border-color: #357ABD; /* UPDATED - Darker shade of primary blue */
+    text-shadow: none; /* Removed text-shadow for a cleaner look */
+    color: #FFF;
+}
+
+    a.btn.btn-blue:hover {
+        background-color: #63A3EA; /* UPDATED - Lighter primary blue */
+        border-color: #4A90E2;
+    }
+
+    a.btn.btn-blue:active {
+        background-color: #357ABD; /* UPDATED - Darker primary blue */
+        border-color: #2A5E8D;
+    }
+
+/* "Red" button re-themed as "Accent/Success" button (e.g., Teal) */
+
+a.btn.btn-accent { /* Renamed from btn-red to btn-accent */
+    background-color: #20c997; /* UPDATED - Teal accent */
+    border-color: #1AAE88; /* UPDATED - Darker Teal */
+    text-shadow: none;
+    color: #FFF;
+}
+
+    a.btn.btn-accent:hover {
+        background-color: #25E0AB; /* UPDATED - Lighter Teal */
+        border-color: #20C997;
+    }
+
+    a.btn.btn-accent:active {
+        background-color: #1AAE88; /* UPDATED - Darker Teal */
+        border-color: #158C70;
+    }
+
+div.highlight {
+        border: 1px dashed #adb5bd; /* UPDATED - Softer gray border */
+        padding: 10px; /* Increased padding slightly */
+        background: white;
+        overflow: auto;
+        margin-left: 20px;
+        margin-right: 20px;
+        border-radius: 4px; /* Added slight rounding */
+        box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Subtle shadow for highlight */
+}
