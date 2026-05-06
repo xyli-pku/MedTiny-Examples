@@ -1,0 +1,11 @@
+// Property 6.1: If the premise was met previously, the output has toggled and differs from prev_output.
+P>=1 [ G (obs_61_premise = 1 & obs_step_taken = 1 => debounced_toggle_debouncer_prev_output != debounced_toggle_debouncer_output) ]
+
+// Property 6.2: Unchanged (this already works natively).
+P>=1 [ G (debounced_toggle_delay_counter > 0 => debounced_toggle_debouncer_prev_output = debounced_toggle_debouncer_output) ]
+
+// Property 6.3: If prev_output != output previously, the latch is now updated.
+P>=1 [ G (obs_63_premise = 1 & obs_step_taken = 1 => debounced_toggle_debouncer_filtered_latch_value = debounced_toggle_debouncer_output) ]
+
+// Property 6.4: Proves correct counting behavior by ensuring the counter only decrements by 1 or holds steady per step.
+P>=1 [ G (obs_64_prev_counter > 0 & obs_step_taken = 1 => (debounced_toggle_delay_counter = obs_64_prev_counter - 1) | (debounced_toggle_delay_counter = obs_64_prev_counter)) ]
